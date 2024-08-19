@@ -14,6 +14,13 @@
 		C37924F02C72202800D2E944 /* ArtBookSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37924EF2C72202800D2E944 /* ArtBookSwiftUITests.swift */; };
 		C37924FA2C72202900D2E944 /* ArtBookSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37924F92C72202900D2E944 /* ArtBookSwiftUIUITests.swift */; };
 		C37924FC2C72202900D2E944 /* ArtBookSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37924FB2C72202900D2E944 /* ArtBookSwiftUIUITestsLaunchTests.swift */; };
+		C37925092C72227700D2E944 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37925082C72227700D2E944 /* Painting.swift */; };
+		C379250C2C72260600D2E944 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C379250B2C72260600D2E944 /* CoreData.framework */; };
+		C379250F2C72279500D2E944 /* ArtBookModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C379250D2C72279500D2E944 /* ArtBookModel.xcdatamodeld */; };
+		C37925112C722F9800D2E944 /* AddArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37925102C722F9800D2E944 /* AddArt.swift */; };
+		C37925132C724E1400D2E944 /* selecticon.png in Resources */ = {isa = PBXBuildFile; fileRef = C37925122C724E1400D2E944 /* selecticon.png */; };
+		C37925152C735BA500D2E944 /* myPersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37925142C735BA500D2E944 /* myPersistenceController.swift */; };
+		C37925172C738A5A00D2E944 /* PaintingModel-Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37925162C738A5A00D2E944 /* PaintingModel-Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		C37924F52C72202800D2E944 /* ArtBookSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtBookSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37924F92C72202900D2E944 /* ArtBookSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtBookSwiftUIUITests.swift; sourceTree = "<group>"; };
 		C37924FB2C72202900D2E944 /* ArtBookSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtBookSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C37925082C72227700D2E944 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
+		C379250B2C72260600D2E944 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C379250E2C72279500D2E944 /* ArtBookModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArtBookModel.xcdatamodel; sourceTree = "<group>"; };
+		C37925102C722F9800D2E944 /* AddArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArt.swift; sourceTree = "<group>"; };
+		C37925122C724E1400D2E944 /* selecticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selecticon.png; path = ../../ArtBook/ArtBook/Assets.xcassets/AccentColor.colorset/selecticon.png; sourceTree = "<group>"; };
+		C37925142C735BA500D2E944 /* myPersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPersistenceController.swift; sourceTree = "<group>"; };
+		C37925162C738A5A00D2E944 /* PaintingModel-Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaintingModel-Data.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C379250C2C72260600D2E944 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +89,12 @@
 		C37924D22C72201900D2E944 = {
 			isa = PBXGroup;
 			children = (
+				C379250D2C72279500D2E944 /* ArtBookModel.xcdatamodeld */,
 				C37924DD2C72201900D2E944 /* ArtBookSwiftUI */,
 				C37924EE2C72202800D2E944 /* ArtBookSwiftUITests */,
 				C37924F82C72202900D2E944 /* ArtBookSwiftUIUITests */,
 				C37924DC2C72201900D2E944 /* Products */,
+				C379250A2C72260600D2E944 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,7 +113,12 @@
 			children = (
 				C37924DE2C72201900D2E944 /* ArtBookSwiftUIApp.swift */,
 				C37924E02C72201900D2E944 /* ContentView.swift */,
+				C37925102C722F9800D2E944 /* AddArt.swift */,
+				C37925162C738A5A00D2E944 /* PaintingModel-Data.swift */,
+				C37925142C735BA500D2E944 /* myPersistenceController.swift */,
+				C37925082C72227700D2E944 /* Painting.swift */,
 				C37924E22C72202700D2E944 /* Assets.xcassets */,
+				C37925122C724E1400D2E944 /* selecticon.png */,
 				C37924E42C72202700D2E944 /* Preview Content */,
 			);
 			path = ArtBookSwiftUI;
@@ -125,6 +147,14 @@
 				C37924FB2C72202900D2E944 /* ArtBookSwiftUIUITestsLaunchTests.swift */,
 			);
 			path = ArtBookSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		C379250A2C72260600D2E944 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C379250B2C72260600D2E944 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C37925132C724E1400D2E944 /* selecticon.png in Resources */,
 				C37924E62C72202700D2E944 /* Preview Assets.xcassets in Resources */,
 				C37924E32C72202700D2E944 /* Assets.xcassets in Resources */,
 			);
@@ -257,8 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C379250F2C72279500D2E944 /* ArtBookModel.xcdatamodeld in Sources */,
+				C37925172C738A5A00D2E944 /* PaintingModel-Data.swift in Sources */,
+				C37925112C722F9800D2E944 /* AddArt.swift in Sources */,
 				C37924E12C72201900D2E944 /* ContentView.swift in Sources */,
+				C37925152C735BA500D2E944 /* myPersistenceController.swift in Sources */,
 				C37924DF2C72201900D2E944 /* ArtBookSwiftUIApp.swift in Sources */,
+				C37925092C72227700D2E944 /* Painting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +624,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C379250D2C72279500D2E944 /* ArtBookModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C379250E2C72279500D2E944 /* ArtBookModel.xcdatamodel */,
+			);
+			currentVersion = C379250E2C72279500D2E944 /* ArtBookModel.xcdatamodel */;
+			path = ArtBookModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C37924D32C72201900D2E944 /* Project object */;
 }
