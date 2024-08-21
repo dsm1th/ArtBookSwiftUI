@@ -11,21 +11,26 @@ import CoreData
 
 struct AddArt: View {
     //@Environment(\.managedObjectContext) private var moc
-    let persistenceController = PersistenceController.shared
-    @ObservedObject var viewModel : PaintingModel
-    let imageState : PaintingModel.ImageState
- 
+    @Environment(\.dismiss) private var dismiss
+  //  let persistenceController = PersistenceController.shared
+  //  @ObservedObject var viewModel : PaintingModel
+    
+   // let imageState : PaintingModel.ImageState
+    
+    var artVM : ContentView.ArtViewModel
     
     @State var name  = ""
     @State var artist = ""
     @State var year = ""
-
+    @State var uiImage : UIImage? = nil
+    @State var imageSelection: PhotosPickerItem? = nil
+    
 
     
     var body: some View {
         
         VStack {
-            PaintingImage(imageState: imageState)
+            /*PaintingImage(imageState: imageState)
                 .overlay(alignment: .bottomTrailing){
                     PhotosPicker(selection: $viewModel.imageSelection
                                  , matching: .images, preferredItemEncoding: .automatic) {
@@ -34,40 +39,59 @@ struct AddArt: View {
                             .font(.system(size: 30))
                             .foregroundColor(.accentColor)
                     }
-            }
+            }*/
+            Image(uiImage: uiImage ?? UIImage())
+                .resizable()
+                .scaledToFill()
+                .frame(width: 350, height: 400)
+                .clipped()
+                .background(Color.gray.opacity(0.2))
+            //
+            photoPickerButton
              
             Group {
                 TextField("Name", text: $name)
                 TextField("Artist:", text: $artist)
-                TextField("Year:", text: $artist)
+                TextField("Year:", text: $year)
             }
             Button {
-                //
+                savePainting()
             } label: {
                 Text("Save")
             }.frame(maxWidth: .infinity)
             Spacer()
         }.padding()
+            .onChange(of: imageSelection) {
+                Task { @MainActor in
+                    if let data = try? await imageSelection?.loadTransferable(type: Data.self) {
+                        uiImage = UIImage(data: data)
+                    }
+                }
+            }
     }
-        
+    var photoPickerButton : some View {
+        PhotosPicker(
+              selection: $imageSelection,
+              matching: .images,
+              photoLibrary: .shared()) {
+                Image(systemName: "camera.circle.fill")
+                  .font(.system(size: 50))
+                  .foregroundColor(.gray)
+              }
+          }
+
          func savePainting() {
-            let context = persistenceController.container.viewContext
             
-            let newPainting = NSEntityDescription.insertNewObject(forEntityName: "Paintings", into: context)
-             newPainting.setValue(name, forKey: "name")
-             newPainting.setValue(artist, forKey: "artist")
-             if  let iyear = Int(year) {
-                 newPainting.setValue(iyear, forKey: "year")
-             }
-             newPainting.setValue(UUID(), forKey: "id")
-             
-             //let data = selectedItems.data
+             artVM.savePainting(name: name, artist: artist, year: year, uiImage: uiImage!)
+             artVM.getData()
+             dismiss()
         }
     }
                                       
 
 #Preview {
-    AddArt(viewModel: PaintingModel(), imageState: .empty)
+    //AddArt(viewModel: PaintingModel(), imageState: .empty)
+    AddArt(artVM: ContentView.ArtViewModel())
 }
 
 struct PaintingImage: View {

@@ -21,6 +21,8 @@
 		C37925132C724E1400D2E944 /* selecticon.png in Resources */ = {isa = PBXBuildFile; fileRef = C37925122C724E1400D2E944 /* selecticon.png */; };
 		C37925152C735BA500D2E944 /* myPersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37925142C735BA500D2E944 /* myPersistenceController.swift */; };
 		C37925172C738A5A00D2E944 /* PaintingModel-Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37925162C738A5A00D2E944 /* PaintingModel-Data.swift */; };
+		C37925192C73FEA300D2E944 /* ArtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37925182C73FEA300D2E944 /* ArtViewModel.swift */; };
+		C379251B2C74111A00D2E944 /* DetailedArtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379251A2C74111A00D2E944 /* DetailedArtView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		C37925122C724E1400D2E944 /* selecticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selecticon.png; path = ../../ArtBook/ArtBook/Assets.xcassets/AccentColor.colorset/selecticon.png; sourceTree = "<group>"; };
 		C37925142C735BA500D2E944 /* myPersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPersistenceController.swift; sourceTree = "<group>"; };
 		C37925162C738A5A00D2E944 /* PaintingModel-Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaintingModel-Data.swift"; sourceTree = "<group>"; };
+		C37925182C73FEA300D2E944 /* ArtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewModel.swift; sourceTree = "<group>"; };
+		C379251A2C74111A00D2E944 /* DetailedArtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedArtView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +117,9 @@
 			children = (
 				C37924DE2C72201900D2E944 /* ArtBookSwiftUIApp.swift */,
 				C37924E02C72201900D2E944 /* ContentView.swift */,
+				C37925182C73FEA300D2E944 /* ArtViewModel.swift */,
 				C37925102C722F9800D2E944 /* AddArt.swift */,
+				C379251A2C74111A00D2E944 /* DetailedArtView.swift */,
 				C37925162C738A5A00D2E944 /* PaintingModel-Data.swift */,
 				C37925142C735BA500D2E944 /* myPersistenceController.swift */,
 				C37925082C72227700D2E944 /* Painting.swift */,
@@ -288,11 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C37925192C73FEA300D2E944 /* ArtViewModel.swift in Sources */,
 				C379250F2C72279500D2E944 /* ArtBookModel.xcdatamodeld in Sources */,
 				C37925172C738A5A00D2E944 /* PaintingModel-Data.swift in Sources */,
 				C37925112C722F9800D2E944 /* AddArt.swift in Sources */,
 				C37924E12C72201900D2E944 /* ContentView.swift in Sources */,
 				C37925152C735BA500D2E944 /* myPersistenceController.swift in Sources */,
+				C379251B2C74111A00D2E944 /* DetailedArtView.swift in Sources */,
 				C37924DF2C72201900D2E944 /* ArtBookSwiftUIApp.swift in Sources */,
 				C37925092C72227700D2E944 /* Painting.swift in Sources */,
 			);

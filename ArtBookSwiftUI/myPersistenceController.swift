@@ -20,12 +20,12 @@ struct PersistenceController {
     static var preview : PersistenceController = {
         let controller = PersistenceController(inMemory: true)
         
-        for i in 0..<previewData.count {
+        for i in 0..<previewPaintings.count {
             let art  = NSEntityDescription.insertNewObject(forEntityName: "Paintings", into: shared.container.viewContext)
-            art.setValue(previewData[i].name, forKey: "name")
-            art.setValue(previewData[i].artist, forKey: "artist" )
-            art.setValue(previewData[i].year, forKey: "year")
-            art.setValue(previewData[i].id, forKey: "id")
+            art.setValue(previewPaintings[i].name, forKey: "name")
+            art.setValue(previewPaintings[i].artist, forKey: "artist" )
+            art.setValue(previewPaintings[i].year, forKey: "year")
+            art.setValue(previewPaintings[i].id, forKey: "id")
         }
         return controller
     } ()

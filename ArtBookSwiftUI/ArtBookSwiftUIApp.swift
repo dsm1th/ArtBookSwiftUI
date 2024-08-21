@@ -15,8 +15,8 @@ struct ArtBookSwiftUIApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }.onChange(of: scenePhase) { _ in
-            persistenceController.save()
-        }
+        }//.onChange(of: scenePhase) { _ in
+           // persistenceController.save()
+       // }
     }
 }
